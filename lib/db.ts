@@ -35,6 +35,19 @@ export interface Customer {
   createdAt?: string;
 }
 
+export interface Appointment {
+  id: string;
+  clientName?: string;
+  name?: string;
+  phone: string;
+  serviceId?: string;
+  service?: string;
+  date: string;
+  time: string;
+  status: 'PENDING' | 'CONFIRMED' | 'CANCELLED' | 'COMPLETED';
+  createdAt?: string;
+}
+
 export function getDB() {
   try {
     if (!fs.existsSync(filePath)) {
@@ -43,6 +56,7 @@ export function getDB() {
         services: [],
         customers: [],
         appointments: [],
+        sales: [],
         gallery: [],
         settings: {}
       };
@@ -56,6 +70,7 @@ export function getDB() {
       services: [],
       customers: [],
       appointments: [],
+      sales: [],
       gallery: [],
       settings: {}
     };
