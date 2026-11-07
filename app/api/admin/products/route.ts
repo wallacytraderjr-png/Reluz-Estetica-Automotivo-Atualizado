@@ -44,7 +44,7 @@ export async function DELETE(request: Request) {
     const id = searchParams.get('id');
     if (!id) return NextResponse.json({ error: 'ID required' }, { status: 400 });
     
-    const db = getDb();
+    getDb()
     db.products = db.products.filter(p => p.id !== id);
     saveDB(db);
     
