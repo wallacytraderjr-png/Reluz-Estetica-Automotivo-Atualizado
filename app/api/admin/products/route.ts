@@ -1,10 +1,10 @@
 import { NextResponse } from 'next/server';
-import { getDB, saveDB, Product } from '@/lib/db';
+import { getDb, saveDB, Product } from '@/lib/db';
 import { v4 as uuidv4 } from 'uuid';
 
 export async function POST(request: Request) {
   try {
-    const db = getDB();
+    const db = getDb();
     const data = await request.json();
     
     const newProduct: Product = {
@@ -23,7 +23,7 @@ export async function POST(request: Request) {
 
 export async function PUT(request: Request) {
   try {
-    const db = getDB();
+    const db = getDb();
     const data = await request.json();
     
     const index = db.products.findIndex(p => p.id === data.id);
@@ -44,7 +44,7 @@ export async function DELETE(request: Request) {
     const id = searchParams.get('id');
     if (!id) return NextResponse.json({ error: 'ID required' }, { status: 400 });
     
-    const db = getDB();
+    const db = getDb();
     db.products = db.products.filter(p => p.id !== id);
     saveDB(db);
     
