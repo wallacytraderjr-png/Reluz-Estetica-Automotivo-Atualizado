@@ -1,51 +1,57 @@
-import { NextResponse } from 'next/server';
-import { getDB } from '@/lib/db';
 import fs from 'fs';
 import path from 'path';
 
-export async function GET() {
+// Define a estrutura e o caminho do ficheiro JSON de dados
+const filePath = path.join(process.cwd(), 'data', 'db.json');
+
+export interface Product {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+  imageUrl: string;
+  stock: number;
+  active: boolean;
+}
+
+export function getDB() {
   try {
-    const db = getDB();
-    return NextResponse.json(db.customers || []);
+    if (!fs.existsSync(filePath)) {
+      // Retorna uma estrutura base vazia caso o ficheiro ainda não exista
+      return {
+        products: [],
+        customers: [],
+        appointments: [],
+        gallery: [],
+        settings: {}
+      };
+    }
+    const fileData = fs.readFileSync(filePath, 'utf-8');
+    return JSON.parse(fileData);
   } catch (error) {
-    return NextResponse.json({ error: 'Failed to fetch customers' }, { status: 500 });
+    console.error('Erro ao ler a base de dados:', error);
+    return {
+      products: [],
+      customers: [],
+      appointments: [],
+      gallery: [],
+      settings: {}
+    };
   }
 }
 
-export async function POST(request: Request) {
+// Cria um alias para aceitar tanto getDB quanto getDb (evita erros de maiúsculas/minúsculas)
+export const getDb = getDB;
+
+export function saveDB(data: any) {
   try {
-    const body = await request.json();
-    const db = getDB();
-
-    const newCustomer = {
-      id: Date.now().toString(),
-      name: body.name,
-      phone: body.phone,
-      address: body.address || '',
-      vehicleBrand: body.vehicleBrand,
-      vehicleModel: body.vehicleModel,
-      plate: body.plate.toUpperCase(),
-      color: body.color,
-      createdAt: new Date().toISOString()
-    };
-
-    if (!db.customers) {
-      db.customers = [];
+    const dir = path.dirname(filePath);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
     }
-
-    db.customers.unshift(newCustomer);
-
-    // Caminho para o ficheiro JSON da base de dados (ajuste se o seu db.json estiver noutra pasta, ex: data/db.json)
-    const filePath = path.join(process.cwd(), 'data', 'db.json');
-    
-    // Grava as alterações no disco físico
-    if (fs.existsSync(path.dirname(filePath))) {
-      fs.writeFileSync(filePath, JSON.stringify(db, null, 2), 'utf-8');
-    }
-
-    return NextResponse.json(newCustomer, { status: 201 });
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');
   } catch (error) {
-    console.error('Erro ao criar cliente:', error);
-    return NextResponse.json({ error: 'Failed to create customer' }, { status: 500 });
+    console.error('Erro ao salvar a base de dados:', error);
   }
 }
