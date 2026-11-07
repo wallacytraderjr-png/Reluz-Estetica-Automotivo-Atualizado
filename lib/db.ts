@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 
-// Define a estrutura e o caminho do ficheiro JSON de dados
 const filePath = path.join(process.cwd(), 'data', 'db.json');
 
 export interface Product {
@@ -15,12 +14,33 @@ export interface Product {
   active: boolean;
 }
 
+export interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  duration?: number;
+  active?: boolean;
+}
+
+export interface Customer {
+  id: string;
+  name: string;
+  phone: string;
+  address?: string;
+  vehicleBrand?: string;
+  vehicleModel?: string;
+  plate?: string;
+  color?: string;
+  createdAt?: string;
+}
+
 export function getDB() {
   try {
     if (!fs.existsSync(filePath)) {
-      // Retorna uma estrutura base vazia caso o ficheiro ainda não exista
       return {
         products: [],
+        services: [],
         customers: [],
         appointments: [],
         gallery: [],
@@ -33,6 +53,7 @@ export function getDB() {
     console.error('Erro ao ler a base de dados:', error);
     return {
       products: [],
+      services: [],
       customers: [],
       appointments: [],
       gallery: [],
@@ -41,7 +62,7 @@ export function getDB() {
   }
 }
 
-// Cria um alias para aceitar tanto getDB quanto getDb (evita erros de maiúsculas/minúsculas)
+// Alias para compatibilidade
 export const getDb = getDB;
 
 export function saveDB(data: any) {
