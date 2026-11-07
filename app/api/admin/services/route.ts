@@ -11,6 +11,10 @@ export async function POST(request: Request) {
       id: `s-${Date.now()}`
     };
     
+    if (!db.services) {
+      db.services = [];
+    }
+    
     db.services.push(newService);
     saveDB(db);
     
@@ -25,7 +29,11 @@ export async function PUT(request: Request) {
     const db = getDB();
     const data = await request.json();
     
-    const index = db.services.findIndex(s => s.id === data.id);
+    if (!db.services) {
+      db.services = [];
+    }
+    
+    const index = db.services.findIndex((s: any) => s.id === data.id);
     if (index === -1) return NextResponse.json({ error: 'Not found' }, { status: 404 });
     
     db.services[index] = { ...db.services[index], ...data };
