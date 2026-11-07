@@ -7,7 +7,8 @@ export async function POST(request: Request) {
     const data = await request.json();
     
     // Find service name
-    const service = db.services.find(s => s.id === data.serviceId);
+    const services = db.services || [];
+    const service = services.find((s: any) => s.id === data.serviceId);
     
     const newAppointment: Appointment = {
       id: `a-${Date.now()}`,
@@ -23,8 +24,10 @@ export async function POST(request: Request) {
     };
     
     // Also save customer if not exists
-    const existingCustomer = db.customers.find(c => c.phone === data.phone);
+    const customers = db.customers || [];
+    const existingCustomer = customers.find((c: any) => c.phone === data.phone);
     if (!existingCustomer) {
+      if (!db.customers) db.customers = [];
       db.customers.push({
         id: `c-${Date.now()}`,
         name: data.customerName,
@@ -38,6 +41,7 @@ export async function POST(request: Request) {
       });
     }
     
+    if (!db.appointments) db.appointments = [];
     db.appointments.push(newAppointment);
     saveDB(db);
     
@@ -50,7 +54,7 @@ export async function POST(request: Request) {
 export async function GET() {
   try {
     const db = getDB();
-    return NextResponse.json(db.appointments);
+    return NextResponse.json(db.appointments || []);
   } catch (error) {
     return NextResponse.json({ error: 'Failed to fetch appointments' }, { status: 500 });
   }
