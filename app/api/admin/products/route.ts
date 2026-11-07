@@ -26,7 +26,7 @@ export async function PUT(request: Request) {
     const db = getDb();
     const data = await request.json();
     
-    const index = db.products.findIndex(p => p.id === data.id);
+    const index = db.products.findIndex((p: any) => p.id === data.id);
     if (index === -1) return NextResponse.json({ error: 'Not found' }, { status: 404 });
     
     db.products[index] = { ...db.products[index], ...data };
@@ -44,8 +44,8 @@ export async function DELETE(request: Request) {
     const id = searchParams.get('id');
     if (!id) return NextResponse.json({ error: 'ID required' }, { status: 400 });
     
-    getDb()
-    db.products = db.products.filter(p => p.id !== id);
+    const db = getDb();
+    db.products = db.products.filter((p: any) => p.id !== id);
     saveDB(db);
     
     return NextResponse.json({ success: true });
