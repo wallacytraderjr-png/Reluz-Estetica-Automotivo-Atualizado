@@ -109,3 +109,50 @@
       "id": "s5",
       "name": "Vitrificação",
       "description": "Proteção cerâmica de longa duração (até 3 anos).",
+      "price": 1200,
+      "imageUrl": "/assets/aistudio/vitrifica__o_4e7d1c3c.jpg",
+      "active": true
+    }
+  ],
+  "sales": [],
+  "appointments": [
+    {
+      "id": "a-1794167778348",
+      "customerName": "max",
+      "phone": "7988556622",
+      "vehicle": "fiat uno (gty8899)",
+      "serviceId": "1",
+      "serviceName": "Serviço Personalizado",
+      "date": "2026-11-09",
+      "time": "08:00",
+      "status": "PENDING",
+      "notes": ""
+    }
+  ],
+  "gallery": [
+    {
+      "id": "g1",
+      "category": "Vitrificações",
+      "imageUrl": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800&auto=format&fit=crop",
+      "description": "BMW com Vitrificação 9H"
+    },
+    {
+      "id": "g2",
+      "category": "Polimentos",
+      "imageUrl": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=800&auto=format&fit=crop",
+      "description": "Correção de pintura em Mercedes"
+    },
+    {
+      "id": "g3",
+      "category": "Lavagens",
+      "imageUrl": "https://images.unsplash.com/photo-1567818735868-e71b99932e29?q=80&w=800&auto=format&fit=crop",
+      "description": "Lavagem detalhada em SUV"
+    },
+    {
+      "id": "g4",
+      "category": "Nossa Loja",
+      "imageUrl": "/assets/aistudio/loja_6d7bc3b4.jpg",
+      "description": "Fachada da Reluz Estética Automotiva"
+    }
+  ]
+}
