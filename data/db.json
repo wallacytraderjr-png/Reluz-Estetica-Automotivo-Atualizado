@@ -84,75 +84,28 @@
     {
       "id": "s2",
       "name": "Lavagem Detalhada",
-      "description": "Limpeza técnica de caixa de rodas e motor.",
+      "description": "Limpeza técnica minuciosa da carroceria, caixas de roda, aplicação de protetor de plásticos e acabamento impecável.",
       "price": 120,
-      "imageUrl": "/assets/aistudio/lavagem_detalhada_99eea18b.jpg",
+      "imageUrl": "/lavagem detalhada.jpg",
       "active": true
     },
     {
       "id": "s3",
       "name": "Higienização Interna",
-      "description": "Limpeza profunda de estofados e carpetes.",
-      "price": 250,
-      "imageUrl": "/assets/aistudio/higiene_b401f22d.jpg",
+      "description": "Limpeza profunda de bancos de tecido/couro, alcatifas, teto e painel, eliminando ácaros, odores e manchas.",
+      "price": 200,
+      "imageUrl": "/higiene.jpg",
       "active": true
     },
     {
       "id": "s4",
       "name": "Polimento Técnico",
-      "description": "Correção de pintura e brilho máximo.",
-      "price": 600,
-      "imageUrl": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800&auto=format&fit=crop",
+      "description": "Remoção de micro-riscos, oxidação e revitalização profunda do brilho e cor da pintura do veículo.",
+      "price": 450,
+      "imageUrl": "/vitrificação.jpg",
       "active": true
     },
     {
       "id": "s5",
       "name": "Vitrificação",
       "description": "Proteção cerâmica de longa duração (até 3 anos).",
-      "price": 1200,
-      "imageUrl": "/assets/aistudio/vitrifica__o_4e7d1c3c.jpg",
-      "active": true
-    }
-  ],
-  "sales": [],
-  "appointments": [
-    {
-      "id": "a-1794167778348",
-      "customerName": "max",
-      "phone": "7988556622",
-      "vehicle": "fiat uno (gty8899)",
-      "serviceId": "1",
-      "serviceName": "Serviço Personalizado",
-      "date": "2026-11-09",
-      "time": "08:00",
-      "status": "PENDING",
-      "notes": ""
-    }
-  ],
-  "gallery": [
-    {
-      "id": "g1",
-      "category": "Vitrificações",
-      "imageUrl": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800&auto=format&fit=crop",
-      "description": "BMW com Vitrificação 9H"
-    },
-    {
-      "id": "g2",
-      "category": "Polimentos",
-      "imageUrl": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=800&auto=format&fit=crop",
-      "description": "Correção de pintura em Mercedes"
-    },
-    {
-      "id": "g3",
-      "category": "Lavagens",
-      "imageUrl": "https://images.unsplash.com/photo-1567818735868-e71b99932e29?q=80&w=800&auto=format&fit=crop",
-      "description": "Lavagem detalhada em SUV"
-    },
-    {
-      "id": "g4",
-      "category": "Nossa Loja",
-      "imageUrl": "/assets/aistudio/loja_6d7bc3b4.jpg",
-      "description": "Fachada da Reluz Estética Automotiva"
-    }
-  ]
-}
