@@ -21,6 +21,17 @@
       "plate": "QKN5588",
       "color": "Preto",
       "createdAt": "2026-11-07T04:08:44.542Z"
+    },
+    {
+      "id": "c-1794167778348",
+      "name": "max",
+      "phone": "7988556622",
+      "address": "",
+      "vehicleBrand": "fiat",
+      "vehicleModel": "uno",
+      "plate": "gty8899",
+      "color": "preto",
+      "createdAt": "2026-11-08T19:56:18.348Z"
     }
   ],
   "products": [
@@ -104,7 +115,20 @@
     }
   ],
   "sales": [],
-  "appointments": [],
+  "appointments": [
+    {
+      "id": "a-1794167778348",
+      "customerName": "max",
+      "phone": "7988556622",
+      "vehicle": "fiat uno (gty8899)",
+      "serviceId": "1",
+      "serviceName": "Serviço Personalizado",
+      "date": "2026-11-09",
+      "time": "08:00",
+      "status": "PENDING",
+      "notes": ""
+    }
+  ],
   "gallery": [
     {
       "id": "g1",
