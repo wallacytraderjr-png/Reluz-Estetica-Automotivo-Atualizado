@@ -1,0 +1,9 @@
+1: [OK] Botão Exportar relatorio funcionando com jsPDF e formatação completa.
+2: [OK] Botão de Configurar relatorio com modal interativo e filtros de exportação.
+3: [OK] Dashboard com alerta de nível crítico e lista de produtos em falta/baixo estoque.
+4: [OK] Dashboard mostrando o desempenho semanal com gráfico interativo dos últimos 7 dias.
+5: [OK] Botões e páginas completas de Política de Privacidade (/privacidade) e Termos de Uso (/termos).
+6: Botão de backup manual não está funcionando.
+7: aba de produtos na visão do cliente, não está funcionando o filtro.
+8: Galeria na visão do cliente, não está funcionando o filtro.
+9: Remover botão de instagram e facebook.

@@ -1,0 +1,180 @@
+{
+  "customers": [
+    {
+      "id": "1794024823546",
+      "name": "Wallacy Santos",
+      "phone": "79988594996",
+      "address": "RUA A 22",
+      "vehicleBrand": "Toyota",
+      "vehicleModel": "Corola",
+      "plate": "IAP3553",
+      "color": "Prata",
+      "createdAt": "2026-11-07T04:13:43.546Z"
+    },
+    {
+      "id": "1794024524542",
+      "name": "Denisson",
+      "phone": "79988556622",
+      "address": "rua A 156",
+      "vehicleBrand": "Fiat",
+      "vehicleModel": "Punto",
+      "plate": "QKN5588",
+      "color": "Preto",
+      "createdAt": "2026-11-07T04:08:44.542Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "p1",
+      "name": "Shampoo Automotivo",
+      "description": "Shampoo de alta performance com pH neutro.",
+      "price": 45.9,
+      "stock": 20,
+      "category": "Limpeza",
+      "imageUrl": "/assets/aistudio/Shampoo_Automotivo_Reluz_em_A__o_a2be0b05.png"
+    },
+    {
+      "id": "p2",
+      "name": "Cheirinho de Carro",
+      "description": "Fragrância premium para o interior do seu veículo.",
+      "price": 15,
+      "stock": 50,
+      "category": "Acessórios",
+      "imageUrl": "/assets/aistudio/Cheirinho_de_Carro_Reluz_a5771bcc.png"
+    },
+    {
+      "id": "p3",
+      "name": "Cera Automotiva",
+      "description": "Cera de carnaúba para proteção e brilho intenso.",
+      "price": 89.9,
+      "stock": 15,
+      "category": "Proteção",
+      "imageUrl": "/assets/aistudio/cera_carnauba_reluz_b386f795.jpg"
+    },
+    {
+      "id": "p4",
+      "name": "Cera Líquida",
+      "description": "Facilidade na aplicação com brilho imediato.",
+      "price": 39.9,
+      "stock": 25,
+      "category": "Proteção",
+      "imageUrl": "/assets/aistudio/Cera_L_quida_Reluz__Brilho_Automotivo_9ced1d27.png"
+    }
+  ],
+  "services": [
+    {
+      "id": "s1",
+      "name": "Lavagem Simples",
+      "description": "Limpeza externa e aspiração básica.",
+      "price": 50,
+      "imageUrl": "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?q=80&w=800&auto=format&fit=crop",
+      "active": true
+    },
+    {
+      "id": "s2",
+      "name": "Lavagem Detalhada",
+      "description": "Limpeza técnica de caixa de rodas e motor.",
+      "price": 120,
+      "imageUrl": "/assets/aistudio/lavagem_detalhada_99eea18b.jpg",
+      "active": true
+    },
+    {
+      "id": "s3",
+      "name": "Higienização Interna",
+      "description": "Limpeza profunda de estofados e carpetes.",
+      "price": 250,
+      "imageUrl": "/assets/aistudio/higiene_b401f22d.jpg",
+      "active": true
+    },
+    {
+      "id": "s4",
+      "name": "Polimento Técnico",
+      "description": "Correção de pintura e brilho máximo.",
+      "price": 600,
+      "imageUrl": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800&auto=format&fit=crop",
+      "active": true
+    },
+    {
+      "id": "s5",
+      "name": "Vitrificação",
+      "description": "Proteção cerâmica de longa duração (até 3 anos).",
+      "price": 1200,
+      "imageUrl": "/assets/aistudio/vitrifica__o_4e7d1c3c.jpg",
+      "active": true
+    }
+  ],
+  "sales": [
+    {
+      "id": "#RELUZ-6891",
+      "clientName": "Monica",
+      "customerEmail": "wallacys3@gmail.com",
+      "customerPhone": "79996541236",
+      "deliveryType": "Retirada na Loja",
+      "address": "Balcão / Loja Reluz",
+      "items": "1x Cera Ceramic Pro Vonixx (R$ 149.90)",
+      "paymentMethod": "Pix",
+      "total": 142.405,
+      "status": "Pendente",
+      "createdAt": "2026-11-10T20:28:51.871Z"
+    },
+    {
+      "id": "#RELUZ-2526",
+      "clientName": "Marcelo",
+      "customerEmail": "wallacys3@gmail.com",
+      "customerPhone": "79988594996",
+      "deliveryType": "Retirada na Loja",
+      "address": "Balcão / Loja Reluz",
+      "items": "1x Cera Ceramic Pro Vonixx (R$ 149.90)",
+      "paymentMethod": "Pix",
+      "total": 142.405,
+      "status": "Pendente",
+      "createdAt": "2026-11-10T20:23:45.558Z"
+    },
+    {
+      "id": "#RELUZ-3439",
+      "clientName": "Gilvan",
+      "customerEmail": "wallacys3@gmail.com",
+      "customerPhone": "7998854996",
+      "deliveryType": "Entrega em Domicílio",
+      "address": "Rua A  123   Ponto novo",
+      "items": "1x Cera Ceramic Pro Vonixx (R$ 149.90)",
+      "paymentMethod": "Pix",
+      "total": 142.405,
+      "status": "Pendente",
+      "createdAt": "2026-11-10T20:16:35.571Z"
+    }
+  ],
+  "appointments": [],
+  "gallery": [
+    {
+      "id": "g-1794341174522",
+      "category": "Polimentos",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJbaDnsWF3XpCZZPx8105J3jLDBWBaZcbsb7o_6SBoZQ&s=10",
+      "description": "Polimento com  Cera Carnauba"
+    },
+    {
+      "id": "g4",
+      "category": "Nossa Loja",
+      "imageUrl": "/assets/aistudio/loja_6d7bc3b4.jpg",
+      "description": "Fachada da Reluz Estética Automotiva"
+    },
+    {
+      "id": "g3",
+      "category": "Lavagens",
+      "imageUrl": "https://images.unsplash.com/photo-1567818735868-e71b99932e29?q=80&w=800&auto=format&fit=crop",
+      "description": "Lavagem detalhada em SUV"
+    },
+    {
+      "id": "g2",
+      "category": "Polimentos",
+      "imageUrl": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=800&auto=format&fit=crop",
+      "description": "Correção de pintura em Mercedes"
+    },
+    {
+      "id": "g1",
+      "category": "Vitrificações",
+      "imageUrl": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800&auto=format&fit=crop",
+      "description": "BMW com Vitrificação 9H"
+    }
+  ]
+}
